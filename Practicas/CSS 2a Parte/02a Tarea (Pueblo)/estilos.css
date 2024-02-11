@@ -1,0 +1,114 @@
+/*Propiedades de clase de repaso: display inline/block 
+vissibility hidden 
+*/
+
+/*______________________________________________________-*/
+/*Fonts Import*/
+
+
+
+/*______________________________________________________-*/
+/*Punto 1*/
+*{box-sizing: border-box;
+margin: 0;}
+
+#contenedor{
+  height: 100vh; width: 100%;
+}
+
+/*Punto 2*/
+#cabecera
+{
+  width: 100%; height: 15%; 
+  
+  background-image: url(mol1.jpg);
+  background-size: cover;
+
+  text-align: center; color: white;
+
+  border-bottom: 4px solid purple;
+}
+
+/*Punto 3*/
+#izquierda{
+  width: 20%; height: 60%;
+
+  float: left;
+
+  background-color: blue;
+
+  color: white;
+
+  padding-top: 50px;
+  
+}
+
+a 
+{
+  text-decoration: none;
+  text-shadow: 1px 1px 2px; 
+   
+}
+a:hover 
+{
+  font-weight: bold;
+
+  color: red;
+}
+a:active
+{
+  font-size: 2em;
+  color: yellow;
+}
+a:visited
+{
+  color: yellow;
+  background-color: rgb(255, 255, 255);
+}
+
+/*Punto 8*/
+#escudo{
+  width: 100px; height: 100px;
+  margin: auto;
+}
+#imagen_1{
+  width: 100px; height: 100px;
+  
+  background-image: url(imagenEscudo2.png);
+  background-repeat: round;
+  background-color: blue;
+}
+
+
+/*Punto 4*/
+#derecha{
+  width: 70%; height: 60%;
+
+  padding: 20px;
+
+  float:left;
+}
+
+
+/*Punto 5*/
+#imagen_2{
+  width: 25%; height: 25%;
+  margin: 10px 20px 10px 10px;
+  background-image: url(DonQuijote.jpg);
+  background-repeat: round;
+  float: left;
+}
+
+
+/*Punto 7*/
+.pie{
+  clear: both;
+  width: 100%; height: 25%;
+  background-color: grey;
+  text-align: center;
+  color: black;
+  font-size: 0.75em;
+}
+
+
+

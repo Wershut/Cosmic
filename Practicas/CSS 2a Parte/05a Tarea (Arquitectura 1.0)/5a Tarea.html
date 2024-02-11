@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script src="https://kit.fontawesome.com/fe060c3d5b.js" crossorigin="anonymous"></script>
+    
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            background-color: brown;
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+        }
+        nav a{
+            text-decoration: none;
+            color: aliceblue;
+            padding: 20px;
+        }
+        nav a:hover{
+            color:yellow; font-weight: bold; text-shadow: 3px 3px 3px black;
+        }
+
+
+        /*_________________________________________________
+        CABECERA*/
+        header{
+            background-image: url(img/arquitectura.jpg);
+            background-size: cover;
+            background-position: center center;
+
+            width: 100%; height: 25vh;  
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header h1{
+            color: yellow;
+            font-size: 3em;
+        }
+        header h2{
+            color: rgb(255, 255, 255);  
+            font-size: 1.6em; 
+        }
+        #cajaTitulos{
+            text-align: center;
+            text-shadow: 3px 3px 3px black;
+        }
+
+        /*_________________________________________________
+        SECTION 1 o de servicios*/
+        section#servicios{
+            background-color: rgb(158, 202, 241);
+            padding: 30px;
+        }
+        div#contenedorServicios{
+            display: flex;         
+        }
+
+        .titulo{
+            font-size: 1.2em;
+            color: brown;
+
+            text-align: center;
+            padding: 20px;
+        }
+        div#izquierda{padding: 20px;}
+        div#derecha{padding: 20px;}
+        /*_________________________________________________
+        SECTION 2 o de obras*/
+        section#obras{
+            background-color: goldenrod;
+            text-align: center;
+        }
+
+
+
+        div#ContenedorObras{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+           
+        }
+        #ContenedorObras article{
+            width: 30%;
+            box-shadow: 3px 3px 3px black;
+            background-color: aliceblue; 
+            margin-top: 20px; margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        #ContenedorObras img{
+            width: 80%;
+            margin-top: 20px;
+        }
+
+
+
+        /*_________________________________________
+        FOOTER*/
+
+        footer{
+            width: 100%; height: 30vh;
+            background-color: rgb(37, 33, 100);
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        footer h2{
+            font-size: 1.5em;
+            color: brown;
+        }
+        #contacte{
+            margin: 0 auto;
+            width: 90%;
+            color: red;
+            font-size: 2em;
+            padding-top: 20px;
+            border-bottom: 2px solid gainsboro;
+        }
+        #enlaces{
+            width: 30%;padding-top: 20px;
+        }
+        #email{
+            width: 30%;padding-top: 20px;
+        }
+        #estamos{
+            width: 30%;padding-top: 20px;
+        }
+        
+    </style>
+
+</head>
+
+
+
+<body>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Obras</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+
+    <header>
+        <div id="cajaTitulos">
+            <h1>Ágora</h1>
+            <h2>Estudios de arquitectura</h2>
+        </div>
+    </header>
+
+
+    <section id="servicios">
+        <h1 class="titulo">Servicios</h1>
+
+        <div id="contenedorServicios">
+            <div id="izquierda">
+                <h2>Diseño de interiores</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias esse nostrum possimus ea velit aut eos ut impedit, eum ad nam vel nihil explicabo culpa labore vero reprehenderit maiores ipsum.</p>
+                <h2>Reformas</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum a optio, quaerat molestiae, dolores minima dignissimos rerum eius laborum doloremque quisquam impedit eaque, ipsa expedita minus veritatis animi labore molestias.</p>
+            </div>
+            <div id="derecha">
+                <h2>Demoliciones</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias esse nostrum possimus ea velit aut eos ut impedit, eum ad nam vel nihil explicabo culpa labore vero reprehenderit maiores ipsum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="obras">
+        <div class="titulo">
+            <h1>Obras</h1>
+        </div>
+        <div id="ContenedorObras">
+            <article>
+                <img src="img/chabola.jpg">
+                <p>Villarrobledo</p>
+            </article>
+            <article>
+                <img src="img/chabola.jpg">
+                <p>Villarrobledo</p>
+            </article>
+            <article>
+                <img src="img/chabola.jpg">
+                <p>Villarrobledo</p>
+            </article>
+        
+
+        
+            <article>
+                <img src="img/chabola.jpg">
+                <p>Villarrobledo</p>
+            </article>
+            <article>
+                <img src="img/chabola.jpg">
+                <p>Villarrobledo</p>
+            </article>
+            <article>
+                <img src="img/chabola.jpg">
+                <p>Villarrobledo</p>
+            </article>
+        </div>
+    </section>
+
+
+    <footer>
+        <div id="contacte">
+            Contacte con nosotros
+        </div>
+        
+        <div id="enlaces">
+            <h2>Enlaces</h2>
+            <a href="#">Facebook</a>
+            <a href="#">IG</a>
+            <a href="#">Whatsapp</a>
+        </div>
+        <div id="estamos">
+            <h2>Estamos en: </h2>
+            <p>Avenida de la Cuerva Roja 48</p>
+            <p>18300 San Juan de la Talerna</p>
+        </div>
+        <div id="email">
+            <h2>Email: </h2>
+            <p>jefiehf8yf@gmail.com</p>
+        </div>
+        
+    </footer>
+
+
+</body>
+</html>

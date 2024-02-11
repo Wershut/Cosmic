@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 100vh;
+            background-color: blue;
+        }
+
+        div.gradient{background-image: linear-gradient(to right, rgb(0, 119, 255), yellow);
+            width: 90%; height: 10%; margin: 0 auto;
+            margin-bottom: 20px;
+            text-align: center; 
+        }
+
+        #planes{
+            border: 2px solid white;
+            height: 80%;
+            display: flex;
+
+            padding: 20px;
+            justify-content: space-around;
+
+
+        }
+
+        .plan{background-color: aliceblue;
+        border-radius: 5px; 
+        text-align: center;
+        width: 29%;
+        }
+
+        h1{ color:aliceblue;
+            font-family: Arial, Helvetica, sans-serif; 
+            text-align: center;}
+
+        .precio{font-family: Arial, Helvetica, sans-serif; 
+            font-style: italic;}
+
+        .plan a{color:blue; 
+            text-decoration: none; 
+            border: 2px solid blue; 
+            padding: 10px; 
+            border-radius: 5px;
+        
+        }
+
+        .plan a:hover{color:white; 
+            background-color: blue;
+            text-decoration: none; 
+            border: 2px solid rgb(238, 255, 0); 
+            padding: 10px; 
+            border-radius: 5px;
+            font-weight: bold;
+        
+        }
+
+        /*Moviles*/
+        @media (max-width:700px){
+            body{ background-color: red;
+            
+            }
+
+            div.gradient{background-image: linear-gradient(to right, rgb(255, 0, 170), yellow);
+            width: 90%; height: auto; margin: 0 auto;
+             
+            }
+
+            #planes{
+            border: 2px solid white;
+            height: auto;
+            display: block;
+
+            padding: 20px;
+            justify-content: space-around;
+
+            }
+
+            .plan{background-color: aliceblue;
+            border-radius: 5px; 
+            text-align: center;
+            width: 90%; height: auto;
+            margin: auto;
+            }
+
+        }
+
+        /*Tablets*/
+        @media (min-width:701px) and (max-width:1090px){
+            body{ background-color: rgb(0, 255, 149);}
+
+            #planes{
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            padding: 20px;
+            justify-content: space-around;
+            }
+
+            #caja1{width: 90%; margin-bottom: 20px;}
+
+            #caja2,#caja3{width: 40%;}
+
+            .plan{padding-bottom: 15px;}
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="gradient">
+        <h1>Elija el plan para poder disfrutar de nuestros servicios: </h1>
+    </div>
+
+    <div id="planes">
+        <div class="plan" id="caja1">
+            <h2>PRINCIPIANTE</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, soluta dolorem molestiae impedit ab repellendus voluptatum dicta facilis maiores, aliquid expedita est architecto nulla placeat beatae alias fugit cum eius!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, soluta dolorem molestiae impedit ab repellendus voluptatum dicta facilis maiores, aliquid expedita est architecto nulla placeat beatae alias fugit cum eius!</p>
+            
+            <p class="precio">1€/mes</p>
+            <a href="#">Elige</a>
+        </div>
+
+
+        <div class="plan" id="caja2">
+            <h2>NORMAL</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, soluta dolorem molestiae impedit ab repellendus voluptatum dicta facilis maiores, aliquid expedita est architecto nulla placeat beatae alias fugit cum eius!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, soluta dolorem molestiae impedit ab repellendus voluptatum dicta facilis maiores, aliquid expedita est architecto nulla placeat beatae alias fugit cum eius!</p>
+            
+            <p class="precio">5€/mes</p>
+            <a href="#">Elige</a>
+        </div>
+
+
+        <div class="plan" id="caja3">
+            <h2>FULL</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, soluta dolorem molestiae impedit ab repellendus voluptatum dicta facilis maiores, aliquid expedita est architecto nulla placeat beatae alias fugit cum eius!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, soluta dolorem molestiae impedit ab repellendus voluptatum dicta facilis maiores, aliquid expedita est architecto nulla placeat beatae alias fugit cum eius!</p>
+            
+            <p class="precio">10€/mes</p>
+            <a href="#">Elige</a>
+        </div>
+
+    </div>
+    
+</body>
+</html>

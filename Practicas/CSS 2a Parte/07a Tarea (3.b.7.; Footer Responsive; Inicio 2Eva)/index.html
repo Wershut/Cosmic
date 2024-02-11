@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{  box-sizing: border-box;
+            margin: 0;}
+
+        body{background-color: antiquewhite;}
+        footer{
+            
+            background-color: grey;
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+            display: flex; flex-wrap: wrap;
+
+            padding: 20px 20px;
+        }
+
+        footer h2{font-size: 0.9em;}
+
+        #aviso {width: 80%; text-align: center;}
+        #redes {width: 19%; text-align: right; 
+            padding-top: 20px; padding-bottom: 20px;}
+
+        /*mobiles*/
+        @media (max-width: 600px) {
+            body{ background-color: blue;}
+            footer div{display: block; }
+
+            #aviso, #redes{width: 100%;}
+            #redes{text-align: center;}
+        }
+
+        /*tablets*/
+        @media (min-width: 601px) and (max-width: 900px) {
+            body{ background-color: rgb(221, 84, 84);}
+            
+        }
+
+        #copyright{width: 100%; border-top: 2px solid white; padding-top: 12px; text-align: center;}
+    </style>
+
+</head>
+
+
+
+<body>
+    <footer>
+        <div id="aviso">
+            <h2>Aviso legal: </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repudiandae perspiciatis quasi eius, expedita harum, voluptas quia exercitationem accusantium, aliquam natus corrupti debitis odit iste consectetur doloribus blanditiis consequatur accusamus?</p>
+        </div>
+
+        <div id="redes">
+            <h2>Redes sociales: </h2>
+            <p>Twiter</p>
+            <p>Instagram</p>
+            <p>Whatsapp</p>
+        </div>
+
+        <div id="copyright">
+            &copy; IES Virijhujgrhuyrvg 2333
+        </div>
+    </footer>
+</body>
+</html>

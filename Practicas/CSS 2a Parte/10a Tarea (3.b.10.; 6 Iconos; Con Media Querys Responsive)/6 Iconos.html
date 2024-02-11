@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba 1</title>
+
+    <style>
+        *{box-sizing: border-box;}
+        body{text-align: center;}
+
+        #contenedor{display:flex; flex-wrap: wrap;
+            justify-content: space-around; justify-content: center; border: 2px solid red ;}
+
+        .servicio{ width: 30%;}
+
+        .servicio img{width: 40%;}
+
+        .titulo{font-family: Arial, Helvetica, sans-serif; color: brown; text-align: center;}
+        
+        a{text-decoration: none; color: rgb(251, 255, 1);}
+
+        .pdeco{color: blueviolet;}
+
+        footer{
+            margin-top: 20vh;
+            width: 100%; display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-around;
+            background-color: grey; color: white; font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #aviso{width: 80%;}
+        h1 #aviso {text-align: center;}
+        #enlaces{width: 20%;text-align:right; margin-bottom: 5vh; padding-right: 2vh; padding-left: 2;}
+        a #enlaces{padding-right: 5vh;}
+        #copyr{width: 90%; border-top: 2px solid white;}
+
+        /*Mobile*/
+        @media (max-width: 601px){
+            .servicio{ width: 100%;}
+        }
+
+        /*Tab*/
+        @media (min-width: 601px) and (max-width:800px){
+            .servicio{width: 50%;}
+            footer{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #aviso{width: 80%;}
+            h1 #aviso {text-align: center;}
+            #enlaces{width: 80%;}
+            #copyr{text-align: center; width: 80%;}
+        }
+
+        /*Mobile footer*/
+        @media (max-width: 701px) {
+            
+            footer {
+            margin-top: 20vh;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: grey;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+
+            p {margin: 5vh;}
+
+            #aviso {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 5vh;
+            }
+
+            h1 #aviso {
+            text-align: center;
+            }
+
+            #enlaces {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 5vh;
+            padding: 2vh;
+            }
+
+            a #enlaces {
+            padding: 0 5vh;
+            text-decoration: none; color: red;
+            }
+
+            #copyr {
+            width: 100%;
+            border-top: 2px solid white;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <section>
+        <h1 class="titulo">NUESTROS SERVICIOS</h1>
+
+        <div id="contenedor">
+            <div class="servicio">
+                <img src="images/asistencia.png">
+                <p class="pdeco">Asistencia</p>
+            </div>
+
+            <div class="servicio">
+                <img src="images/consultoría-1-300x215.jpg">
+                <p class="pdeco">Asistencia</p>
+            </div>
+
+            <div class="servicio">
+                <img src="images/drone.jpg">
+                <p class="pdeco">Asistencia</p>
+            </div>
+
+            <div class="servicio">
+                <img src="images/mobile.png">
+                <p class="pdeco">Asistencia</p>
+            </div>
+
+            <div class="servicio">
+                <img src="images/soluciones.jpg">
+                <p class="pdeco">Asistencia</p>
+            </div>
+
+            <div class="servicio">
+                <img src="images/web.jfif">
+                <p class="pdeco">Asistencia</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div id="aviso">
+            <h2>AVISO</h2>
+            <p style="padding-left: 5vh;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse unde ipsum error laudantium obcaecati odio sint, quae dolorum quis recusandae consequuntur corrupti eius vitae ea eum sequi nam maxime numquam.</p>
+        </div>
+
+        <div id="enlaces">
+            <h3>Redes sociales</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Whatsapp</a></li>
+                <li><a href="#">IG</a></li>
+                <li><a href="#">Twitwer</a></li>
+            </ul>
+        </div>
+
+        <div id="copyr">
+            <p>&copy; IES ANDRESILLO 2024</p>
+        </div>
+
+    </footer>
+</body>
+</html>

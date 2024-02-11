@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio de Arquitectura y Diseño de interiores</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            /*border: 1px solid red*/
+        }
+        body { background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/26/El_Paisaje_Manchego_%2813701840255%29.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        }
+        /********************************************
+            BARRA DE NAVEGACIÓN
+        ********************************************/
+        nav {  background-color: brown; 
+            display: flex;
+            justify-content: space-around; 
+            position: sticky;
+            top:0;
+        }
+
+        nav a { text-decoration: none;
+                color:white; 
+                padding: 20px;       
+        }
+        nav a:hover { color:yellow; font-weight: bold;text-shadow: 3px 3px 3px black;}
+        /********************************************
+           HEADER ( CABECERA )
+        ********************************************/
+        header {
+            background-image: url("images/dibujotecnico.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        header h1 { color:yellow;
+             font-size: 4em;}
+        header h2 { color:white}
+        #caja-titulos { 
+            text-align: center;
+            text-shadow: 3px 3px 3px black;
+        }
+        #contenedor-servicios {
+            display: flex;
+            padding: 10px;
+            justify-content: space-around;
+        }
+        .titulo {
+            color:brown;
+            text-align: center;
+            text-shadow: 2px 2px 3px black;
+        }
+        section {
+            padding: 20px
+        }
+        #contenedor-obras { display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border: 2px solid orange;
+        padding: 10px;
+        
+        }
+        #contenedor-obras img { width: 80%;}
+
+        #contenedor-obras article { width: 30%;
+            box-shadow: 3px 3px 3px black;
+            text-align: center;
+            background-color: white;
+            margin-top: 10px;
+            padding: 20px;
+            border-radius: 5px;
+
+
+        }
+        section#obras {
+            background-color: antiquewhite;
+        }
+        footer {
+            background-color: grey;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 20px;
+        }
+        footer h2 { font-size: .9em;}
+        #contacte {
+            width: 100%;
+            border-bottom: 2px solid white;
+            
+        }
+        #enlaces {width: 33%; }
+        #enlaces a {color:white;
+        text-decoration: none; }
+        #enlaces a:hover { font-size: 2em;}
+        #email {width: 33%; }
+        #estamos-en  {width: 33%; }
+        footer div {padding: 10px;}
+        #contenedor-clientes {
+            display: flex;
+            justify-content: space-around;
+            border:2px solid red ;
+            padding-top: 10px;
+        }
+        #contenedor-clientes article{
+            width: 30%;
+            text-align: center;
+            border: 2px solid blue;
+        }
+        #contenedor-clientes article h3 { font-style: italic;}
+        #contenedor-clientes article img { width: 40%;border-radius: 50%;}
+        #izquierda, #derecha { width: 40%;}
+
+        @media (max-width: 600px){
+            /*nav {
+                display: block; background-color: rgb(10, 69, 165);
+            }
+            nav a{display:block; text-align: center;}*/
+
+            nav {
+                flex-wrap: wrap; background-color: rgb(10, 69, 165);
+                position: static;
+            }
+            nav a{width: 100%; text-align: center;}
+
+            #contenedor-servicios { 
+                flex-wrap:wrap; 
+                /******Otra opción borrando lo de arriba
+                display: block;*/
+            }
+            #izquierda,#dereccha{width: 100%;}
+
+            #contenedor-obras{flex-wrap: wrap;}
+            #contenedor-obras article{width: 90%; align-content: center; background-color: rgb(136, 222, 246);}
+
+            #contenedor-clientes{flex-wrap: wrap;}
+            #contenedor-clientes article{width: 100%; align-content: center; background-color: rgb(136, 167, 246);}
+
+            footer{flex-wrap: wrap;}
+            #contacte,#enlaces,#estamos-en,#email{width: 100%;}
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/fe060c3d5b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#obras">Obras</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <header>
+        <div id="caja-titulos">
+            <h1>Ágora</h1>
+            <h2>Estudio de Arquitectura</h2>
+            <i class="fa-solid fa-dumbbell"></i>
+        </div>
+    </header>
+    <section id="servicios">
+        <h1 class="titulo">Servicios</h1>
+        <div id="contenedor-servicios">
+
+           
+            <iframe id="izquierda" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1836.8079056640304!2d-2.590156815736633!3d39.26260855496169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1702903444679!5m2!1ses!2ses" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="derecha">
+                <h2>Dónde estamos</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda hic quae eaque neque labore nisi beatae. Molestias quia deserunt aliquam, porro numquam aperiam et non enim nam aspernatur quo culpa.</p>
+            </div>
+        </div>
+    </section>
+    <section id="obras">
+        <h1 class="titulo">Obras</h1>
+        <div id="contenedor-obras"><!-- esto va a ser flex box-->
+            <article>
+                <img src="https://st3.idealista.com/news/archivos/styles/amp_1200x675_16_9/public/2022-07/chalet_idealista.png?VersionId=3WIFl6vaespgqyIrU2vJmhCsALmybJXe&itok=eyop6Pi7" alt="">
+                <p>Madrid</p>
+            </article>
+            <article>
+                <img src="https://st3.idealista.com/news/archivos/styles/amp_1200x675_16_9/public/2022-07/chalet_idealista.png?VersionId=3WIFl6vaespgqyIrU2vJmhCsALmybJXe&itok=eyop6Pi7" alt="">
+                <p>Barcelona</p>
+            </article>
+            <article>
+                <img src="https://st3.idealista.com/news/archivos/styles/amp_1200x675_16_9/public/2022-07/chalet_idealista.png?VersionId=3WIFl6vaespgqyIrU2vJmhCsALmybJXe&itok=eyop6Pi7" alt="">
+                <p>Bilbao</p>
+            </article>
+            <article>
+                <img src="https://st3.idealista.com/news/archivos/styles/amp_1200x675_16_9/public/2022-07/chalet_idealista.png?VersionId=3WIFl6vaespgqyIrU2vJmhCsALmybJXe&itok=eyop6Pi7" alt="">
+                <p>Valencia</p>
+            </article>
+            <article>
+                <img src="https://st3.idealista.com/news/archivos/styles/amp_1200x675_16_9/public/2022-07/chalet_idealista.png?VersionId=3WIFl6vaespgqyIrU2vJmhCsALmybJXe&itok=eyop6Pi7" alt="">
+                <p>Villarrobledo</p>
+            </article>
+            <article>
+                <img src="https://st3.idealista.com/news/archivos/styles/amp_1200x675_16_9/public/2022-07/chalet_idealista.png?VersionId=3WIFl6vaespgqyIrU2vJmhCsALmybJXe&itok=eyop6Pi7" alt="">
+                <p>Ciudad Real</p>
+            </article>     
+        </div>
+    </section>
+    <section id="opiniones-clientes">
+        <h1 class="titulo">Opiniones de nuestros clientes</h1>
+        <div id="contenedor-clientes">
+            <article>
+                <img src="images/76561515-retrato-de-personas-estudio-disparar-con-expresión-de-cara-sonriente (1).jpg" alt="">
+                <h3>"Son los mejores</h3>
+                <p>Juana López</p>
+            </article>
+            <article>
+                <img src="images/moda-masculina-lentes-cara-hombre-carametria-caramorfoligia-consultoria-de-imagen.jpg">
+                <h3>"Son Estupendos</h3>
+                <p>María Gómez</p>
+            </article>
+            <article>
+                <img src="https://previews.123rf.com/images/rawpixel/rawpixel1704/rawpixel170441704/76561515-retrato-de-personas-estudio-disparar-con-expresi%C3%B3n-de-cara-sonriente.jpg" alt="">
+
+                <h3>"Buen servicio a un precio insuperable</h3>
+                <p>Pepe Martínez</p>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <div id="contacte">
+            Contacte con nosotros
+        </div>
+        <div id="enlaces">
+            <h2>Enlaces</h2>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#">Twiter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div id="estamos-en">
+            <h2>Estamos en</h2>
+            <p>Avda Institutos s/n</p>
+            <p>13700 Alcázar de San Juan</p>
+        </div>
+        <div id="email">
+            <h2>E-mail</h2>
+            <p>arquitecto@agora.com</p>
+        </div>
+
+    </footer>
+</body>
+</html>

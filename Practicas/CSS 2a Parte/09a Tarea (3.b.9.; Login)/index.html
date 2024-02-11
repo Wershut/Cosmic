@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            background-image: url(playaTarde.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #Login{
+            margin: 0 auto; margin-top: 20%; 
+            width: 30vh; height: 25vh;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.5);
+            padding: 20px;
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+        }
+
+        @media (max-width:600px){
+            #login {width: 90%;}
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="Login">
+        
+        <form action="login.php">
+            <img src="login-computer-icons-download-avatar-icon.jpg" alt="" style="height: 30px; width: 30px;">
+            <label for="email"></label>
+            <label type="email" id="email" name="email"></label><br>
+            <label>Email<input type="email" id="email" name="email"></label><br>
+            <label for="contraseña" >Contraseña</label>
+            <input type="password" name="contra" id="contra">
+            
+        </form>
+    </div>
+
+    
+</body>
+</html>

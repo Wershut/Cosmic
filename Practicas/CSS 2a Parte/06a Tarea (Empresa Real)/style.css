@@ -1,0 +1,245 @@
+
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+/*font-family: 'Poppins';*/
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lora&family=McLaren&family=Monoton&family=Oswald:wght@200&display=swap');
+
+i{
+    padding: 50px;
+    font-size: 100px;
+}
+
+/*GENERAL*/
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins';
+
+}
+
+/*NAV*/
+nav{
+    background-image: linear-gradient(to right, rgb(0, 26, 255), yellow);
+    display: flex;
+    justify-content: space-around;
+}
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 30px;
+}
+nav a:hover{
+    color:yellow; font-weight: bold; text-shadow: 3px 3px 3px black;
+}
+
+/*Partes*/
+body 
+{
+  background: rgb(30, 134, 219);
+  background-image: url('img/WebAtom.jpg'); 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed;
+  color: aliceblue;
+
+  /*Para parallax*/
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    width: 100%;
+    text-align: center; padding-top: 65px;  margin-top: 0px;
+    background-image: linear-gradient(to right, rgba(255, 149, 190, 0.98), rgba(107, 213, 255, 0.98));
+    
+}
+
+
+/*EFECTO PARALLAX*/
+
+.parallax {
+    background: url(img/MotherboardTexture1.jpg); 
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.parallax h1 {
+    color: #ffffff;
+    font-size: 70px;
+    text-align: center;
+}
+.parallax .sombrio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; width: 100%;
+    background: rgba(0,0,0,.4);
+    z-index: 2;
+}
+.parallaxContent {
+    z-index: 3;
+}
+.pageContent {
+    padding: 30px;
+    color: yellow; 
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 25px; margin-bottom: 25px;
+}
+
+
+/*ADICIONAL: Gradient*/
+#separa{
+    box-sizing: content-box;
+    width: 100%;
+    height: 50px;
+     
+    background-image: linear-gradient(to right, blue, yellow, rgb(0, 255, 170),purple);
+}
+
+.regula{
+    padding: 20px;
+    position: absolute;
+    /*justify-content: space-around; display: inline-flex;*/
+
+    margin: 0 auto; 
+}
+
+.ordena{
+    display: flex; 
+    justify-content: space-around;
+    
+}
+
+div.recuadroOpaco{
+    width: 48%; 
+    background: rgba(255, 255, 255, 0.6);
+    
+    margin: 25px;
+    padding-top: 10px; padding-bottom: 10px;
+    
+    box-shadow: black 2px 2px 2px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    justify-content: space-around;
+
+    font-size: 0.75em;
+    flex-wrap: wrap;
+}
+
+.recuadroOpacoContent{
+    width: 60%;
+
+}
+
+.ImagRedo{
+    width: 20vh; height: 20vh;
+    border-radius: 50%;
+}
+
+.titulo{
+    font-size: 1.2em;
+    color: yellow;
+
+    text-align: center;
+    padding: 20px;
+}
+       
+/*_________________________________________________
+    SECTION 1 o de localizacion*/
+    section#Localizacion{
+        width: 95%;
+        background: rgba(255, 255, 255, 0.6);
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    div#ContenedorLocalizacion{
+        display: flex; 
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        margin: 15px 15px;  
+        padding: 20px;  
+        
+        /*border: 2px solid yellow;*/
+    }
+    
+    div#izquierda1{
+        width: 45%;
+        
+        padding: 15px;
+    }
+
+    div#derecha1{
+        width: 45%;
+        
+        padding: 15px;
+        text-align: center;
+    }
+    
+/*_________________________________________________
+    SECTION 2 o de servicios*/
+    section#Servicios{
+        width: 95%;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 30px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+
+    div#ContenedorServicios{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;  
+        padding: 20px;   
+    
+    }
+
+
+/*_________________________________________________
+    SECTION 3 o de clientes*/
+    section#Clientes{
+        width: 95%;
+        background: rgba(255, 255, 255, 0.6);
+        margin: 0 auto;
+        margin-top: 20px; margin-bottom: 10px;
+    }
+
+    div#ContenedorClientes{
+        display: flex; 
+        margin: 30px;  
+    }
+
+    article img{
+        width: 75%; height: 75%;
+    }
+
+
+    /*______________________________________________
+    FOOTER */
+    div#IconosFooter{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;  
+        padding: 20px;
+    }
+
+
+
+
+    
