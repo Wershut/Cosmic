@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Praise&display=swap');
+/*    font-family: 'Dancing Script', cursive;
+
+    font-family: 'Pacifico', cursive;
+
+    font-family: 'Praise', cursive;*/
+
+#especialh1{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;color: indigo; font-size: 4em;
+}
+li,a,p {
+    color: yellow;
+    font-family: 'Pacifico', cursive;
+    text-align: justify;
+    text-decoration: none;
+}
+#eslogan{
+    
+    font-style: italic;
+    font-size: 3em;
+    color: orange;
+    font-family: 'Praise', cursive;
+    text-align: center;
+    text-shadow: 1px 1px white;
+}
+
+body{
+    padding: 20px;
+}
+.subapartado{
+    color: purple; font-family: 'Praise', cursive; font-size: 3em;
+}
+a:link    {color: yellow;}
+a:visited  {color: gray;}
+a:hover   {color: purple; font-weight: bold;}
+a:active {color: red;}
+
+.pie{
+    border: 2px solid yellow;
+    border-radius: 20px;
+    text-align: center;
+
+    margin: auto;
+    width: 70%;
+    padding: 20px;
+}
+
+
+
+/*_________________________________________*/
+label, legend{
+    color: darkblue; font-family: Arial, Helvetica, sans-serif; font-size: 20px;
+}
+
+
+/*______________________________________________*/
+table{
+    width: 80%; margin: 0 auto;
+}
+table,tr,th,td{
+    border: 2px solid darkblue; border-collapse: collapse; width: 80%;
+    text-align: center;
+}
+th{
+    background-color: violet; color: white; text-align: center;
+}
+.cuna{
+    background-color: purple; color: yellow;
+}

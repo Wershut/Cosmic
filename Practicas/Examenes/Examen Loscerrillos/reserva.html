@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/estilosformularios.css" type="text/css">
+</head>
+
+
+
+<body style="background-color: violet">
+    <h1 style="font-family: Arial, Helvetica, sans-serif; font-style: italic;">Haga su reserva</h1>
+   <form action="realizareserva.php" method="get">
+
+
+    
+    <fieldset>
+        <!--El legend tiene que estar dentro del fieldset-->
+        <legend>Datos Personales</legend>
+        <label>Nombre:
+            <input type="text" name="nombr" maxlength="30" required autofocus>
+        </label>
+        <p></p>
+
+        <label>Apellidos:
+            <input type="text" name="Apll" maxlength="50">
+        </label>
+        <p></p>
+
+        <label>DNI:
+            <input type="text" name="dni" placeholder="dni con letra">
+        </label>
+        <p></p>
+    </fieldset>
+
+
+    
+    <fieldset>
+        <!--El legend tiene que estar dentro del fieldset-->
+        <legend>Datos de su estancia</legend>
+        <label>N de personas:
+            <input type="number" name="num" value="2" min="1" max="6" >
+        </label>
+        <p></p>
+
+        <label>Fecha de llegada:
+            <input type="date" name="entr">
+        </label>
+        <p></p>
+
+        <label>Fecha de salida:
+            <input type="date" name="sal">
+        </label>
+        <p></p>
+
+        <select>Tipo de habitación:
+            
+            <option value="in" name="tipo hab">Individual</option>
+            <option value="dob" name="tipo hab" selected>Doble</option >
+            <option value="tri" name="tipo hab">triple</option>
+        </select>
+        <p></p>
+
+        <label>No fumador:
+            <input type="checkbox" name="fum" checked>
+        </label>
+        <p></p>
+
+        <!--Los radio tienen que tener nombre o name-->
+        <label> Motivo del viaje: <p></p>
+            <input type="radio" name="motivo">Trabajo 
+            <input type="radio" name="motivo" checked>Ocio
+            <input type="radio" name="motivo">Otros
+        </label>
+    </fieldset>
+
+    <input type="submit" value="reserva">
+    <input type="reset" value="reiniciar">
+   </form> 
+</body>
+</html>

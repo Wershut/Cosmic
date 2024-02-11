@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Empezando en JS</title>
+</head>
+
+
+<body>
+    <h1>Introduccion a JAVASCRIPT</h1>
+    <button onclick="bienvenida()">Bienvenida</button>
+    <button onclick="suma()">Sumar</button>
+    <button onclick="sumados()">Sumar</button>
+    
+    <!--Ver termino tipado-->
+    <script>
+        function bienvenida(){
+            alert('Bienvenido');
+            let nombre = prompt('Como te llamas?');
+            alert("Encantado de conocerte"+ nombre); 
+        }
+        
+        function suma(){
+            let n1 = prompt("Dime numero: ");
+            let n2 = prompt("Dime otro numero: ");
+            let suma= Number(n1)+Number(n2);
+            alert("La suma de "+n1+" mas "+n2+" es: "+suma);
+        }
+
+        function sumados(){
+
+            let n1 = prompt("Dime numero: ");
+            if(isNaN(n1)){
+                alert("No es un numero");
+            }else{
+                let n2=prompt("Dime otro");
+                if(isNaN(n2)){
+                alert("No es un numero");
+                }else{
+                    let suma= Number(n1)+Number(n2);
+                    alert("La suma de "+n1+" mas "+n2+" es: "+suma);
+                }
+            }
+
+            let suma= Number(n1)+Number(n2);
+            alert("La suma de "+n1+" mas "+n2+" es: "+suma);
+        }
+    </script>
+    
+</body>
+</html>
