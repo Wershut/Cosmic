@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+h1
+{   
+    
+    font-size: 50px ;
+    color:#D2691E; text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+h2
+{   
+    
+    font-size: 30px ;
+    color: #00008B; text-align: center;
+    font-family: 'Caveat', cursive;
+}
+h3 
+{
+    font-size: 25px;
+    color: #008B8B;
+    font-family: Arial;
+}
+
+
+/*_________________________________________________________________________________*/
+.recuadro-info 
+{
+    border: 5px solid rgb(45, 213, 45) ;
+    width: 600px;
+    margin: 0 auto;
+    padding: 50px 80px 30px 80px;
+    background-color: rgba( 255, 255, 255, 0.7);
+    background-attachment: fixed;
+    
+}
+
+
+/*_________________________________________________________________________________*/
+body
+{
+    background-image: url(img/conjunto-varias-herramientas-construccion-sobre-fondo-madera-herramientas-reparacion-hogar_722820-1439.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/*_________________________________________________________________________________*/
+table
+{
+    background-color: rgba(217, 255, 0, 0.5);
+    width: 500px;
+    border: 3px solid red;
+    border-collapse: collapse;
+
+    text-align: center;
+
+    margin: 0 auto;
+
+}
+
+th {border: 3px solid red; padding: 15px 10px 15px 10px;}
+
+#imag-ferre 
+{
+    border-radius: 50%;
+    width: 200px; height: 200px;
+    
+}
+
+#centrado {text-align: center;}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Cáfe Paris</title>
+
+    <link href="estilos1.css"; rel="stylesheet";type="text/css">
+
+</head>
+
+
+
+<body background="imag/coffee.jpg">
+
+
+
+        
+<h1> Café Paris </h1>  
+
+<div class="recuadro-eslogan"> Un momento de relax </div>
+<br>
+<div class="lista">
+    <li><a href="4a-tarea.html" target="_blank">Principal</a></li>
+    <li><a href="carta.html" target="_blank">Nuestra carta</a></li>
+    <li><a href="contacto.html" target="_blank">Contácte con nosotros</a></li>
+
+</div>
+<h2>Contacte con nosotros</h2>
+
+<br> <br>
+
+<form action="PHP/contacto.php" method="get" >
+    <fieldset class="formulario">
+        <label for="nombre-completo">Nombre y apellidos:
+            <input type="text" id="option[]" name="nombre-completo" required maxlength="50" placeholder="Escriba su nombre y apellidos">
+        </label>
+        <p> </p>
+        <label>Fecha de nacimiento:
+            <input type="date">
+        </label>
+
+        <p></p>
+        <label> Suele consumir: <p></p>
+            <input type="radio" >Té <p></p>
+            <input type="radio" checked>Café <p></p>
+            <input type="radio">Ambos <p></p>
+        </label>
+
+        <p></p>
+        <label>Cantidad consumida: <p></p>
+            <input type="number" min="1" max="5">
+        </label>
+
+        <p></p>
+        <label>
+            <select id="cafe">
+                <option value="1" selected>Madrid</option>
+                <option value="2">Albacete</option>
+                <option value="3">Villarrobledo</option>
+            </select>
+        </label>
+
+        <p></p>
+        <label>
+            <input type="checkbox" checked>Deseo recibir información sobres las novedades y ofertas.
+        </label>
+
+
+        <p></p>
+        <input type="reset" value="Reinicio">
+        <input type="submit" value="Enviar">
+    </fieldset>
+    <!--ENVIO-REINICIO-------------------------------->
+    
+</form>
+   
+
+</body>
+</html>

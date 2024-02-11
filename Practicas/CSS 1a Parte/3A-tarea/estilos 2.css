@@ -1,0 +1,41 @@
+
+
+body
+{
+    background-image: url(img/conjunto-varias-herramientas-construccion-sobre-fondo-madera-herramientas-reparacion-hogar_722820-1439.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/*_________________________________________________________________________________*/
+.recuadro 
+{
+    border: 5px solid rgb(45, 213, 45) ;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 30px 30px 30px;
+    background-color: rgba( 255, 255, 255, 0.7);
+    
+    
+}
+
+/*_________________________________________________________________________________*/
+/*PROPIEDADES DE FORMULARIO*/
+
+.formulario 
+{
+    color:rgb(9, 13, 141);
+    font-family: sans-serif;
+    font-size: 18px;
+
+    background-color: rgb(176, 211, 239); 
+
+    padding: 50px 40px 50px 40px;
+    border-radius: 80px;
+    width: 48%;
+
+    margin: 0 auto;
+
+}

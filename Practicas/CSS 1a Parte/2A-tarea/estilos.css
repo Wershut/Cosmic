@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lora&family=McLaren&family=Monoton&family=Oswald:wght@200&display=swap');
+body
+{
+    text-align: center;
+    background-image: url(https://imgv3.fotor.com/images/gallery/Purple-gradient-background.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+h1{font-family: 'Monoton', sans-serif;}
+h2{font-family: 'Lora', serif;}
+h3{font-family: 'Oswald', sans-serif;}
+.p-font{font-family: 'McLaren', sans-serif;}
+.font-mono{font-family: 'Monoton', sans-serif;}
+
+.font-1{font-family: 'Courier Prime', monospace;}
+/*__________________________________________________________*/
+.style-1
+{
+    font-family: 'Courier Prime', monospace;
+    font-weight: bold;
+    font-style: italic;
+
+    border-radius: 5%;
+    border-bottom: 2px solid blue; border-top: 4px orangered; border-left: 9px red; 
+    border-width: 2px 5px 8px; border-top-right-radius: 30pc;
+
+    background-color: gray;
+    padding-top: 1cm; padding-bottom: 1cm; padding-left: 1cm; padding-right: 1cm;
+    width: 45%;
+
+    margin: 0 auto;
+    
+}
+
+.icon 
+{
+    font-size: 100px;
+    
+    
+
+    text-shadow: 3px 2px 3px; 
+    color: blueviolet;
+}
+
+.icon-2
+{
+    font-size: 190px;
+
+    text-shadow: 3px 2px 3px; 
+    color: rgb(42, 13, 147);
+}
+
+.center 
+{
+    margin: 0 auto;
+    /*display: block;*/
+}
+
+.sepa {justify-content: space-around;}
+
+a 
+{
+    text-decoration: none;
+    background-color: rgb(19, 25, 113);
+    color: aliceblue;
+    padding: 10px;
+    text-shadow: 3px 2px 3px; 
+    
+    width: 6%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*position: absolute;*/
+    margin: 0 auto;
+    
+}
+
+/*_________________________________________________________________*/
+a:hover 
+{
+    font-weight: bold;
+    background-color: rgb(13, 97, 37);
+}
+a:active
+{
+    font-weight: 800;
+    color: aliceblue;
+    background-color: brown;
+}
+a:visited
+{
+    color: red;background-color: yellow;
+}
+
+/*_________________________________________________________________*/
+#aviso 
+{
+    width: 35%;
+    background-color: blue; 
+
+    color: aliceblue; font-family: 'Courier New', Courier, monospace;
+    border: 2px solid gray;
+    margin: 30px 20px 20px 20px;
+    /*este margin sustituye a margin-left, margin-right...*/
+    margin: auto;
+    
+}
+/*_________________________________________________________________*/
+/*table#horas-modulo,
+table#horas-modulo td  {padding: 50px; vertical-align: top;}
+table#horas-modulo th {height: 50px;}
+table#horas-modulo tr:hover 
+{
+    background-color: rgb(153, 218, 219); font-size: 20px;
+    border: 2px solid blue;
+    margin-top: 18px;
+    font-size:20px; padding:12px;
+}  
+tr:nth-child(even) {background-color: grey;}
+tr:nth-child(odd) {background-color: rgb(239, 213, 16);}
+
+#horas-modulo th {height: 15px; 
+    padding:30px;padding-top: 2cm; padding-bottom: 0.5cm;
+    
+    border-collapse: collapse;} 
+table#horas-modulo {width: 75%; text-align: center; margin: 0 auto;}*/
+
+table#horas-modulo, 
+table#horas-modulo td  {padding: 50px; vertical-align: top;}
+table#horas-modulo th {height: 50px;}
+table#horas-modulo tr:hover 
+{
+    background-color: rgb(153, 218, 219); font-size: 20px;
+    
+    font-size:20px; 
+}  
+tr:nth-child(even) {background-color: grey;}
+tr:nth-child(odd) {background-color: rgb(239, 213, 16);}
+
+table#horas-modulo 
+{
+    width: 75%;  margin: 0 auto; margin-top: 18px; padding:12px;
+
+    border: 2px solid blue;
+    border-collapse: collapse;
+    
+    text-align: center;
+}

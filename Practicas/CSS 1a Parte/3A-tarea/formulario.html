@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="estilos 2.css" type="text/css">
+</head>
+
+<body class="body-general"; background="img/ferre.jpg">
+<div class="recuadro">
+    <!--______________________________________________________________________________________________________________-->
+    <h1>CONTACTE CON NOSOTROS AHORA MISMO</h1>
+    <hr style="border-width: 6px;">
+    
+    <!--FORMULARIOS-____________________________________________________________________________________________-->
+    <form action="PHP/contacto.php" method="get">
+    
+        <fieldset class="formulario">
+        <legend style="color: red; background-color: azure;">FORMULARIO</legend>
+
+            <fieldset class="formulario-izq">
+            <legend style="color:red">DATOS</legend>
+
+            <label for="nombre-completo">Nombre y apellidos:
+                <input type="text" id="option[]" name="nombre-completo" required maxlength="50">
+            </label>
+            <p> </p>
+
+            <label for="contra">Contraseña
+                <input type="text" id="option[]" name="contra" required maxlength="8" placeholder="9999-9999 letra y número">
+            </label>
+            <p> </p>
+        
+            <label for="usuario">Usuario
+                <input type="text" id="option[]" name="user" value="anónimo" disabled> 
+            </label>
+            <p> </p>
+
+            <label for="">Nivel: <br>
+                <input type="radio"  id="level" value="Prin"  >Principiante <br> <p> </p>
+                <input type="radio"  id="level" value="Avaz"  checked>Avanzado <br> <p> </p>
+                <input type="radio"  id="level" value="Prof"  >Profesional <br> <p> </p>
+            </label>
+        
+        </fieldset>
+        
+        
+            <label>Nacionalidad:
+                <select id="nacionalidad" name="optionn[]">
+                    <option value="1">Española</option>
+                    <option value="2">Europea (UE)</option>
+                    <option value="3">Otra</option>
+                </select>
+            </label>
+
+            <p> </p>
+
+            <label>Comentario:</p>
+                <textarea name="comentario-usuario" id="coment" cols="100" rows="5" placeholder="Escriba-las-observaciones..."></textarea> 
+            </label>
+
+            <label>
+                <input type="checkbox"name="deseo" checked>Deseo recibir comunicados <br> <p> </p>
+            </label>
+
+            <label>
+                <input type="checkbox" name="declarado">Declaro haber leido todas las condiciones de uso <br> <p> </p>
+            </label>
+
+        
+        
+
+        
+        <p></p>
+        
+        <hr>
+        
+        <!--ENVIO-REINICIO-------------------------------->
+        <input type="reset" value="Reinicio">
+        <P></P>
+        <input type="submit" value="Enviar">
+    </form>
+    <div> <p>ENVIOS</p> </div>
+    <!--FIN-FORMULARIO---------------------------------------------------------------------------->
+    <form action="/upload" method="post">
+        <fieldset class="formulario">
+            <label for="file">Subir archivo:</label>
+            <input type="file" name="file" id="add-file">
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+
+    <hr>
+    
+</div>
+
+    <p></p>
+    <a href="3a-tarea.html">LINK PÁGINA PRINCIPAL</a>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+
+h1 {
+    color:green;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: right;
+}
+
+p{
+    color:green; 
+    font-family: Arial; 
+    font-size: 10pt;
+    text-align: center;
+}
+    
+h2{
+    background-color: blue;
+    color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+    color:green;
+    background-color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+
+}
+
+table,th,td {
+    background-color: orange;
+    border: 2px solid red;
+
+}
+
+.importante {
+    color: pink; 
+    font-size: 15pt; 
+    font-weight: bold; /*negrita*/; 
+    font-style: italic;
+
+    background-color: lightyellow;
+
+}
+
+.titulo-grande{
+    font-weight: bold; font-size: 20px; color:orange;
+}
+
+#retrato {width: 30%;}
