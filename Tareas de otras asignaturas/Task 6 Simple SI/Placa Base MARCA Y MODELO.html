@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<title>Placa Base MARCA y MODELO</title>
+<style type="text/css">
+	.objMovible{position:absolute;cursor:pointer;z-index:1}
+</style>
+
+<script src="drag_drop.js">
+</script>
+
+<script src="respuestas.js">
+</script>
+
+</head>
+<body>
+<IMG id="fondo" style="position:absolute; left:200px;top:0px;" src="imagPlaca.png">
+
+<script>
+for (i=0;i<sitio.length;i++)
+ document.write('<div style="position:absolute; left:'+(sitio[i][0]+parseInt(fondo.style.left))+'px;top:'+(sitio[i][1]+parseInt(fondo.style.top))+'px;width:90px;height:55px;background-color:#87CEEB;opacity:.40; text-align: center;border-style:outset;">'+'</div>');
+</script>
+
+<script>
+for (i=0;i<sitio.length;i++)
+ document.write('<div class="objMovible"  id="c'+i+'" style="left:'+(15+i)+'px;top:'+(60+i*70)+'px;width:90px;height:55px;background-color:#AAAAff;opacity:.80; text-align: center;border-style:outset;">'+sitio[i][2]+'</div>');
+</script>
+<!--ORIGINAL:
+for (i=0;i<sitio.length;i++)
+ document.write('<div class="objMovible"  id="c'+i+'" style="left:'+(10+i*20)+'px;top:'+(50+i*20)+'px;width:80px;height:35px;background-color:#AAAAff;opacity:.80; text-align: center;border-style:outset;">'+sitio[i][2]+'</div>');
+-->
+<BR>
+<INPUT type="button" id="prueba" value="Comprobar" onClick="comprueba()">
+
+
+
+</body></html>

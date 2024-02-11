@@ -1,0 +1,182 @@
+body {
+  background: #112031;
+  
+  display: flex;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  min-height: 80vh;
+}
+
+/*_________________________________________*/
+#ovalo-gran 
+{
+    background: rgb(237, 101, 101);
+    border-radius: 50%;
+    width: 70px;
+    height: 80px;
+    border: 3px solid rgb(255, 0, 0);
+    opacity: 0.3;
+    position: absolute;
+    cursor: pointer;
+  
+}
+#circle-3 
+{
+    background: rgb(230, 212, 173);
+    border-radius: 50%;
+    width: 50px;
+    height: 60px;
+    border: 3px solid rgb(255, 174, 0);
+    opacity: 0.3;
+    position: absolute;
+    cursor: pointer;
+  
+}
+#rectangulo-amarillo
+{
+    background: rgb(210, 230, 173);
+    width: 120px;
+    height: 70px;
+    border: 3px solid yellow;
+    opacity: 0.3;
+    position: absolute;
+    cursor: pointer;
+}
+#rectangulo-peque
+{
+    background: rgb(147, 214, 231);
+    width: 90px;
+    height: 50px;
+    border: 3px solid rgb(0, 179, 255);
+    opacity: 0.3;
+    position: absolute;
+    cursor: pointer;
+}
+#rectangulo
+{
+    background: rgb(147, 231, 172);
+    width: 130px;
+    height: 90px;
+    border: 3px solid rgb(0, 255, 17);
+    opacity: 0.3;
+    position: absolute;
+    cursor: pointer;
+}
+#rectangulo-largo
+{
+    background: rgb(231, 147, 221);
+    width: 260px;
+    height: 60px;
+    border: 3px solid rgb(255, 0, 217);
+    opacity: 0.3;
+    position: absolute;
+    cursor: pointer;
+}
+#rectangulo-largo-2
+{
+    background: rgb(188, 147, 231);
+    width: 120px;
+    height: 60px;
+    border: 3px solid rgb(119, 0, 255);
+    opacity: 0.3;
+    position: absolute;
+    cursor: pointer;
+}
+/*==============================================================0*/
+/*Recuadros y contenidos*/
+.recuadro-derecho
+{
+  border: 10px solid blue;
+  right: 22px;
+  left: 300px;
+  top: 25px;
+  width: 920px;
+  position: relative;
+}
+    
+  #contenido-recuadro-derecho 
+  {
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+/*----------------------------------------------------*/
+#recuadro-izq 
+{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 20px;
+  width: 290px;
+  height: 100vh; /* Usamos viewport height para ocupar todo el alto de la pantalla */
+  background-color: rgb(67, 105, 231);
+  /* z-index: -1;  Esto coloca el recuadro detrÃ¡s del contenido */
+}
+  
+#recuadro-izq-contenido 
+{
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  
+}
+  
+#recuadro-izq-p 
+{
+  
+  margin: 13px;
+  
+}
+/*___________________________________________________________________*/ 
+
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 150px;    
+}
+
+.card div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transition: 1.5s;
+}
+
+.card .front {
+  background: #1f0cc3;
+  transform: perspective(300px) rotateY(0deg);
+}
+
+.card .back {
+  background: #682fc4;
+  transform: perspective(300px) rotateY(180deg);
+}
+
+
+.card:hover .front {
+ 
+  transform: perspective(300px) rotateY(180deg);
+}
+
+.card:hover .back {
+ 
+  transform: perspective(300px) rotateY(360deg);
+}
+
+.card div h1 {
+  font-size: 20px;
+  color: #f1f1f1;
+}  
