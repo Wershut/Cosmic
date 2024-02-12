@@ -56,18 +56,30 @@
          * precioConIVA: recibe el precio y devuelve
          * el precio con IVA
          *******************************************/
-        function precioConIVA(precio){
-            if 
+        function precioConIVA(precio) {
+            let precioConIVA = precio + (precio * 0.21);
+            return precioConIVA;
         }
 
         /*****************************************
          * calcularPrecioConIVA: pregunta el precio, y si es 
          * mayor de 2 mil se le aplica el IVA de 21 por ciento.
          *******************************************/
-        function calcularPrecioConIVA(){
-            IVA = (N1*0.21);
-            total = IVA + Number(num1)
-            return total;
+        function calcularPrecioConIVA() {
+            let precio = prompt("Ingrese el precio: ");
+            if (isNaN(precio)) {
+                alert("Ingresa un num ");
+                return;
+            }
+
+            precio = Number(precio);
+
+            if (precio > 2000) {
+                total = precio + (precio * 0.21);
+                alert("Precio con IVA con 21 por ciento es: " + total);
+            } else {
+                alert("Precio sin IVA es: " + precio);
+            }
         }
     </script>
 </body>
