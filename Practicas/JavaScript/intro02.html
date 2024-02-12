@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introducción a JavaScript</h1>
+
+    <label><button onclick="suma()">Sumar</button></label><br><br>
+    <label><button onclick="resta()">Restar</button></label><br><br>
+    <label><button onclick="login()">Iniciar Sesión</button></label><br><br>
+    <label><button onclick="compurebaPar()">Par o Impar</button></label><br><br>    
+    <label><button onclick="Edad()">Comprobar edad</button></label><br><br>
+    <label><button onclick="masa()">Indice msc</button></label><br><br>
+    <label><button onclick="Media()">Calcular la media</button></label><br><br>
+    <label><button onclick="tri()">Calcular área</button></label><br><br>
+
+    <script>
+
+        function suma(){   
+        alert ('Bienvenido a mi página');
+        let n1 = prompt ('Dime un número');
+
+            if (isNaN(n1)){
+                alert ("No es un numero");
+
+            } else {
+                let n2 = prompt ("Dime otro número");
+                if (isNaN(n2)){
+                alert ("No es un numero");
+
+            } else {
+                let suma = Number(n1)+Number(n2);
+            alert ("La suma de "+n1+" + "+n2+" = "+suma);
+            }  
+          }
+        }
+          
+        function resta(){
+        alert ("Vamos a restar");
+        let n1 = prompt ('Dime un número');
+
+            if (isNaN(n1)){
+                alert ("No es un numero");
+
+            } else {
+                let n2 = prompt ("Dime otro número");
+                if (isNaN(n2)){
+                alert ("No es un numero");
+
+            } else {
+                let resta = Number(n1)-Number(n2);
+            alert ("La resta de "+n1+" - "+n2+" = "+resata);
+            }  
+          }
+        }
+
+
+        function login(){
+            alert ("Introduce los valores para iniciar sesión.");
+            let usuario = prompt ('Introduce el usuario');
+            let contra = prompt ('Introduce contraseña');
+
+            if (usuario == "admin" && contra == "1234"){
+                alert ('Has iniciado sesión');
+
+            } else {
+                alert ('Error, usuario o contraseña incorrectos.');
+            }
+
+        }
+        
+        function esPar(n1){
+            if(n1%2 == 0){
+                return true;
+
+            } else {
+                return false;
+            }
+        }
+
+        function compurebaPar(){
+            let numero;
+            do {
+                alert ('ERROR');
+                numero = prompt ('Dime un número');
+
+            } while (isNaN(numero));
+
+            if(isNaN(numero)){
+                alert ('No es un numero');
+                return;
+            }
+
+            if (esPar(numero)){
+                alert ('Es par');
+
+            } else {
+                alert ('Es impar');
+            }
+        }
+
+        function imc(m,h){
+            indice = m/(h*h);
+            return indice;
+        }
+
+
+
+        function masa(){
+            let peso = prompt ("Dime tu peso");
+            let altura = prompt ("Dime tu altura");
+
+            alert (imc(peso,altura));
+        }
+
+        function Area(b,h){
+            media = (b*h)/2;
+            return areaa;
+
+        }
+       
+        function tri(){
+            let n1 = prompt ('Dime la altura');
+            let n2 = prompt ('Dime la base');
+
+            alert (areaa(n1),Number(n2));
+        }
+
+        function Edad(){
+            let edad = prompt ('Dime tu edad');
+
+            if (isNaN(edad)){
+                alert('Error, eso no es un número');
+                return;
+            }
+
+            if (edad <0 || edad >100){
+                alert ('Estás muerto lokete');
+                return;
+            }
+
+            if (edad >=18){
+                alert ('Bienvenido a la página');
+
+            } else {
+                alert ('Eres menor, no puedes entrar');
+            }
+        }
+
+        function Media(){
+            let n1 = prompt ('Dime un numero');
+            let n2 = prompt ('Dime otro numero');
+            let n3 = prompt ('Dime el ultimo numero');
+
+            let media = (Number(n1)+Number(n2)+Number(n3))/3;
+
+            alert ('La media es: '+media);
+        }
+
+     
+    </script>
+
+</body>
+</html>
