@@ -73,11 +73,10 @@
                 alert("Ingresa un num ");
                 return;
             }
-
             precio = Number(precio);
 
             if (precio > 2000) {
-                total = precio + (precio * 0.21);
+                total = precio * 1.21;
                 alert("Precio con IVA con 21 por ciento es: " + total);
             } else {
                 alert("Precio sin IVA es: " + precio);
