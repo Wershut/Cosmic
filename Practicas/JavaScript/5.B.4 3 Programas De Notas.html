@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.B.4 TRES PROGRAMAS SOBRE NOTAS</title>
+
+    <style>
+        .contenedor{
+            border: 3px solid blue; 
+            background-color: aliceblue;
+            margin: 0 auto;
+            padding: 20px; display: flex; justify-content: space-around; flex-wrap: wrap;
+        }
+
+        #display{
+            border: 2px solid red;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h2 style="width: 100%; text-align: center;">******************* CALIFICAR NOTAS *******************</h2>
+
+        <form>
+            <label>Introduce la nota: <input type="number" id="nota" required></label> <br><br>
+            <button onclick="enviar()">Enviar</button>
+        </form>
+
+        <p id="display"></p>
+    </div>  
+
+    <div class="contenedor">
+        <h2 style="width: 100%; text-align: center;">*** Alguno de los 3 numeros menor de 10 ***</h2>
+
+        <form>
+            <label><button onclick="comparar()">Comparar</button></label><br><br>
+        </form>
+
+    </div>
+    
+    <div class="contenedor">
+        <h2 style="width: 100%; text-align: center;">******************* MEDIA NOTAS *******************</h2>
+
+        <form>
+            <label><button onclick="Media()">Media</button></label><br><br>
+        </form>
+
+    </div>
+    
+    
+    <!--*********************************************************************
+    ***********     SCRIPTs
+    **************************************************************************-->
+    <script>
+       function enviar() {
+            let nota = document.getElementById("nota").value
+            let display = document.getElementById("display")
+            
+            if (nota < 0 || nota > 10) {
+                display.innerHTML = "La nota que has escrito esta fuera del rago entre 0 y 10. ";
+                return;
+            }
+            
+            let calificacion;
+            if (nota < 3) {
+                calificacion = "Muy deficiente";
+            } else if (nota < 5) {
+                calificacion = "Insuficiente";
+            } else if (nota < 6) {
+                calificacion = "Suficiente";
+            } else if (nota < 7) {
+                calificacion = "Bien";
+            } else if (nota < 9) {
+                calificacion = "Notable";
+            } else {
+                calificacion = "Sobresaliente";
+            }
+            
+            display.innerHTML = "RESULTADO:"+ calificacion;
+        }
+
+        function comparar(){
+            let n1 = prompt ('Dime un numero');
+            let n2 = prompt ('Dime otro numero');
+            let n3 = prompt ('Dime el ultimo numero');
+
+            if ((n1 || n2 || n3)<10){
+                alert ('Alguno de los números es MENOR a 10');
+
+            } else {
+                alert ('Numeros iguales a 10 o mayores');
+            }
+        }
+
+        function Media(){
+            let n1 = prompt ('Dime la primera nota');
+            n1=Number(n1);
+            let n2 = prompt ('Dime la 2a nota');
+            n2=Number(n2);
+            let n3 = prompt ('Dime la 3a nota');
+            n3=Number(n3);
+
+            let media = (Number(n1)+Number(n2)+Number(n3))/3;
+
+            if (media>=5){
+                alert ('Promociona '+media);
+            }else{
+                alert ('No promociona '+media);
+            }
+            
+        }
+    </script>
+</body>
+</html>
