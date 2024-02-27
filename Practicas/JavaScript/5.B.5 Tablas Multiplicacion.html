@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-         #display{
-            width: 40%;
+        body{
+            background-image: linear-gradient(45deg, rgb(233, 228, 158) 0 50%, rgb(155, 155, 225) 50% 100%);
+        }
+        #display{
+            width: 20%;
             border: 3px solid blue;
             border-radius: 10px;
-            height: 150px;
+            height: 250px;
             margin: auto;
             overflow: auto;
-            padding: 12px;
+            padding: 15px;
             background-color: aliceblue;
         }
     </style>
@@ -21,15 +24,17 @@
 
 <body>
     <h1>Tabla Multiplicar</h1><br>
+    <label>Escribe el numero de la tabla de multiplicar que deseas que se muestre:: <input type="number" id="multiNum" required></label> <br><br>
     <button onclick="multiplicar()">multiplicar</button><br>
+
     <div id="display">
 
     </div>
 
     <script>
         function multiplicar(){
-            let multi = prompt('escribe el numero de la tabla de multiplicar que deseas que se muestre: ')
-            
+            let multi = document.getElementById("multiNum").value;
+           
             if (multi < 0 || multi > 10) {
                 display.innerHTML = "El valor que has escrito esta fuera del rago entre 0 y 10. ";
                 return;
