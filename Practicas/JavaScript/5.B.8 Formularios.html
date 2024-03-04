@@ -13,56 +13,49 @@
 
 <body>
     <h1>Alta cliente</h1>
-    <form action="altaCliente.php" 
-    onsubmit = "return validaFormulario()">
-        <p></p>
-         <label for="nombre">Nombre: </label>
-        <p></p>
-         <input type="text" name="nombre" id="nombre" 
-         placeholder="Escriba su nombre">
-
-        <p></p>
-
-
-         <label for="edad">Edad: </label>
-        <p></p>
-         <input type="number" name="edad" id="edad" 
-         placeholder="Escriba su edad">
-        <p></p>
-
-
-         <label for="provincia">Provincia: </label>
-            <select name="provincia" id="provincia">
-                <option value="elija">Elija una</option>
-                <option value="cr">Ciudad Real</option>
-                <option value="ab">Albacete</option>
-                <option value="gu">Guadalajara</option>
-                <option value="tol">Toledo</option>
-                <option value="cu">Cuenca</option>
-
-                <option value="bo">El Bonillo</option>
-            </select>
-
-            <p></p>
-
-            <label for="acepto">
-                He leido y acepto las condiciones 
-            </label><input type="checkbox" id="acepto" name="acepto" checked>
-        <p></p>
-
-        <label for="password">Contraseña: </label>
-        <p></p>
-            <input type="text" name="password1" id="pass1" 
-            placeholder="Escriba la contraseña"><button onclick="muestraContra()">Ver</button>
-        <p></p>
-            <input type="text" name="password2" id="pass2" 
-            placeholder="comprobacion de la contraseña">
-
-        <p></p>
-
-         <input type="submit" value="Dar de alta">
+    <form action="altaCliente.php" onsubmit = "return validaFormulario()">
+      <!--***********************************-->
+      <p></p>
+        <label for="nombre">Nombre: </label>
+      <p></p>
+        <input type="text" name="nombre" id="nombre" 
+        placeholder="Escriba su nombre">
+      <p></p>
+      <!--***********************************-->
+        <label for="edad">Edad: </label>
+      <p></p>
+        <input type="number" name="edad" id="edad" 
+        placeholder="Escriba su edad">
+      <p></p>
+      <!--***********************************-->
+      <label for="provincia">Provincia: </label>
+      <select name="provincia" id="provincia">
+        <option value="elija">Elija una</option>
+        <option value="cr">Ciudad Real</option>
+        <option value="ab">Albacete</option>
+        <option value="gu">Guadalajara</option>
+        <option value="tol">Toledo</option>
+        <option value="cu">Cuenca</option>
+        <option value="bo">El Bonillo</option>
+      </select>
+      <p></p>
+      <!--***********************************-->
+      <label for="acepto">
+          He leido y acepto las condiciones 
+      </label><input type="checkbox" id="acepto" name="acepto" checked>
+      <p></p>
+      <!--***********************************-->
+      <label for="password">Contraseña: </label>
+      <p></p>
+        <input type="text" name="password1" id="pass1" 
+        placeholder="Escriba la contraseña"><button onclick="muestraContra()">Ver</button>
+      <p></p>
+        <input type="text" name="password2" id="pass2" 
+        placeholder="comprobacion de la contraseña">
+      <!--***********************************-->
+      <p></p>
+        <input type="submit" value="Dar de alta">
     </form>
-
 
     <!--***********************************
     *SCRIPT

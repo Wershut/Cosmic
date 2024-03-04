@@ -6,14 +6,66 @@
     <title>Document</title>
 
     <style>
-
+        body{
+            text-align: center;
+        }
+        #display{
+            width: 20%;
+            border: 3px solid blue;
+            border-radius: 10px;
+            height: 250px;
+            margin: auto;
+            overflow: auto;
+            padding: 15px;
+            background-color: aliceblue;
+        }
     </style>
 </head>
 
 
 <body>
-    <div id="display">
-        
-    </div>
+    <form onsubmit="return add()">
+        <p></p>
+            <label for="concepto">Concepto: </label>
+        <p></p>
+            <input type="text" name="concepto" id="concepto">
+        <p></p>
+            <label for="price">Importe: </label>
+        <p></p>
+            <input type="number" name="price" id="price" placeholder="Introduzca el importe">
+        <p></p>
+        <input type="submit" value="add">
+    </form>
+
+    <div id="display"></div>
+    <h1 id="finalPrice">0</h1>
+
+    <script>
+        let totalPrice = 0;
+
+        function add(){
+            let display = document.getElementById("display");
+
+            let price = Number(document.getElementById("price").value);
+            let finalPrice = document.getElementById("finalPrice");
+            totalPrice += price;
+            finalPrice.textContent = totalPrice;
+
+            let concepto = document.getElementById("concepto").value;
+
+            let contador = 0;
+            contador = contador + 1;
+            
+            display.innerHTML += "<ol>";
+            display.innerHTML += "<li> ["+ contador+"]     " + concepto + " con un precio de " + price + "€ </li>";
+            display.innerHTML += "</ol>";
+
+            //para resetear el formulario
+            document.getElementById("concepto").value = "";
+            document.getElementById("price").value = "";
+
+            return false;
+        }
+    </script>
 </body>
 </html>
