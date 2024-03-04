@@ -42,6 +42,7 @@
 
     <script>
         let totalPrice = 0;
+        let contador = 0;
 
         function add(){
             let display = document.getElementById("display");
@@ -52,12 +53,11 @@
             finalPrice.textContent = totalPrice;
 
             let concepto = document.getElementById("concepto").value;
-
-            let contador = 0;
+            
             contador = contador + 1;
             
             display.innerHTML += "<ol>";
-            display.innerHTML += "<li> ["+ contador+"]     " + concepto + " con un precio de " + price + "€ </li>";
+            display.innerHTML += "<li> ["+contador+"] " + concepto + " con un precio de " + price + "€ </li>";
             display.innerHTML += "</ol>";
 
             //para resetear el formulario
