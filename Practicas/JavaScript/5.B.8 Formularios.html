@@ -78,64 +78,62 @@
           return true;
         }*/
 
-        function validaFormulario (){
-          let nombre = document.getElementById("nombre");
-          if (nombre.value.length <6){
-            alert("La longitud minima del nombre es 6 caracteres");
-            nombre.focus;
-            return false;
-          } 
-          
-          let edad = document.getElementById("edad");
-          if (edad.value < 18){
-            alert("Los menores no pueden registrarse");
-            edad.focus();
-            return false;
-          }   
+      function validaFormulario (){
+        let nombre = document.getElementById("nombre");
+        if (nombre.value.length <6){
+          alert("La longitud minima del nombre es 6 caracteres");
+          nombre.focus();
+          return false;
+        }
 
-          let provincia = document.getElementById("provincia");
-          if (edad.value == "elija"){
-            alert("Debe seleccionar una provincia");
-            provincia.focus();
-            return false;
-          } 
+        let edad = document.getElementById("edad");
+        if (edad.value < 18){
+          alert("Los menores no pueden registrarse");
+          edad.focus();
+          return false;
+        }
 
-          let acepto = document.getElementById("acepto");
-          if (acepto.checked == false){
-            alert("Debe aceptar las condiciones");
-            acepto.focus();
-            return false;
-          } 
+        let provincia = document.getElementById("provincia");
+        if (provincia.value == "elija"){ 
+          alert("Debe seleccionar una provincia");
+          provincia.focus();
+          return false;
+        }
 
-          let pass = document.getElementById("pass1");
-          if (pass1.value != pass2.value){
+        let acepto = document.getElementById("acepto");
+        if (acepto.checked == false){
+          alert("Debe aceptar las condiciones");
+          acepto.focus();
+          return false;
+        }
+
+        /*let pass = document.getElementById("pass1");
+          if (pass1.value != (pass2.value)){
             alert("Deben de ser iguales");
             password.focus();
             return false;
-          } 
-            let pass1 = document.getElementById("pass1");
-            let pass2 = document.getElementById("pass2");
-            if(pass1.value != pass2.value){
-                alert('No coinciden');
-                contra.focus();
-                return false;
-            }
-            
-            
+          } */
 
-
-            alert ("Datos correctos. Se procede a su envio");
-            return true;
-          
+        let pass1 = document.getElementById("pass1");
+        let pass2 = document.getElementById("pass2");
+        if (!pass1.value) { //para cuando se deje vacia la casilla
+          alert("Debe ingresar una contraseña");
+          pass1.focus(); 
+          return false;
+        } else if (pass1.value != pass2.value) {
+          alert("Las contraseñas deben de ser iguales");
+          pass2.focus(); 
+          return false;
         }
 
-        function muestraContra(){
-            let pass1 = document.getElementById("pass1");
-            pass1.type = "text";
-        }
+        alert ("Datos correctos. Se procede a su envio");
+        return true;
+    }
 
-
-         
+    function muestraContra(){
+      let pass1 = document.getElementById("pass1");
+      pass1.type = "text";
+    }
     </script>
 </body>
 </html>
