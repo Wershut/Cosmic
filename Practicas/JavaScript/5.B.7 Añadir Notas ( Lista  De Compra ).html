@@ -48,11 +48,13 @@
             let display = document.getElementById("display");
 
             let price = Number(document.getElementById("price").value);
-            let finalPrice = document.getElementById("finalPrice");
-            totalPrice += price;
-            //textContent sirve para modificar el contenido del h1
-            finalPrice.textContent = totalPrice;
             
+            /****************************************************************/
+            let totalObj = document.getElementById("finalPrice");
+            let totalNum = Number(finalPrice.innerHTML);
+            finalPrice.innerHTML = Number (finalPrice.innerHTML) + price;
+            /**************************************************************/
+
             let concepto = document.getElementById("concepto").value;
             
             contador = contador + 1;
@@ -66,6 +68,14 @@
             document.getElementById("price").value = "";
 
             return false;
+            
+            /*****************************************************************/
+            //La primera manera con la que hice la suma en el h1
+            //let finalPrice = document.getElementById("finalPrice").innerHTML;
+            //totalPrice += price;
+            //textContent sirve para modificar el contenido del h1
+            //finalPrice.textContent = totalPrice;
+            /******************************************************************/
         }
     </script>
 </body>
