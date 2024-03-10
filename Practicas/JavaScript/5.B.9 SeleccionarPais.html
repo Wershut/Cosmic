@@ -5,27 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        #provincia {
+            visibility: hidden;
+        }
     </style>
 </head>
 
 
 <body>
+    <p>9.3.3	Diseñar una página web con  un formulario con un campo  de tipo “color” y 
+        si su color es distinto de rojo ( #ff000 ) o amarillo ( #ffff00 ) no envíe los datos.</p>
     <p>9.3.4	Hacer los siguientes cambios en la página anterior</p>
     <ol>
         <li>El campo anterior está “color” por defecto disabled=”disabled”</li>
         <li>Añadir un select con tres opciones: “Elija producto”, “Móvil”, “Tablet”</li>
-        <li>En el evento onchange del select, cuando vale “Móvil” se habilita el campo color quitándole el atributo disabled con el método: .removeAttribute(“disabled”); Para ponerle otra vez el atributo en caso de que no valga “Móvil” se vuelve a poner el atributo “disabled” con setAttribute(“disabled”,””) al elemento del color.</li>
+        <li>En el evento onchange del select, cuando vale “Móvil” se habilita el campo 
+            color quitándole el atributo disabled con el método: .removeAttribute(“disabled”); 
+            Para ponerle otra vez el atributo en caso de que no valga “Móvil” se vuelve 
+            a poner el atributo “disabled” con setAttribute(“disabled”,””) al elemento del color.</li>
     </ol>
-    <p>9.3.5	Hacer un formulario con un select “Pais” con las opciones “Elija destino”, “España”, “Fuera de España”. Y un select “Provincia” con algunas provincias. Inicialmente el select provincia tiene la propiedad css visibility:hidden. Sólo si la opción elegida es “España”, se cambia su propiedad  visibility de hidden a visible.
+    <p>9.3.5	Hacer un formulario con un select “Pais” con las opciones “Elija destino”, 
+        “España”, “Fuera de España”. Y un select “Provincia” con algunas provincias. 
+        Inicialmente el select provincia tiene la propiedad css visibility:hidden. 
+        Sólo si la opción elegida es “España”, se cambia su propiedad  visibility de hidden a visible.
     </p>
     <!--********************************************************-->
+    <form id="myForm">
+        <label for="producto">Elige un producto:</label>
+        <select id="producto" onchange="toggleColor()">
+            <option value="">Elija producto</option>
+            <option value="movil">Móvil</option>
+            <option value="tab">Tablet</option>
+        </select><br><br>
 
+        <label for="color" disabled>Elige un color:</label>
+        <input type="color" id="color" disabled><br><br>
 
+        <label for="pais">Elige un destino:</label>
+        <select id="pais" onchange="toggleProvincia()">
+            <option value="">Elija destino</option>
+            <option value="espana">España</option>
+            <option value="fuera_de_espana">Fuera de España</option>
+        </select><br><br>
 
+        <label for="provincia">Elige una provincia:</label>
+        <select id="provincia">
+            <option value="">Elige una provincia</option>
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="valencia">Valencia</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
 
     <script>
+        function toggleColor() {
+            var producto = document.getElementById("producto");
+            var color = document.getElementById("color");
 
+            if (producto.value === "movil") {
+                color.removeAttribute("disabled");
+            } else {
+                color.setAttribute("disabled", "");
+            }
+        }
+
+        function toggleProvincia() {
+            var pais = document.getElementById("pais");
+            var provincia = document.getElementById("provincia");
+
+            if (pais.value === "espana") {
+                provincia.style.visibility = "visible";
+            } else {
+                provincia.style.visibility = "hidden";
+            }
+        }
+
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            var color = document.getElementById("color");
+            var colorValue = color.value;
+
+            if (colorValue !== "#ff0000" && colorValue !== "#ffff00") {
+                event.preventDefault();
+                alert("El color debe ser rojo (#ff0000) o amarillo (#ffff00) para enviar el formulario.");
+            }
+        });
     </script>
 </body>
 </html>
