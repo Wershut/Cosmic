@@ -23,11 +23,13 @@
         <!--*******************************************************************-->
         <p></p>
         <label for="producto">PRODUCTO</label>
-        <select onchange="habilitaColor()" name="producto" id="producto">  
+        <select onchange="activarColor()" name="producto" id="producto">  
             <option value="elija">Elija producto...</option>
             <option value="movil">Móvil</option>
             <option value="tab">Tablet</option>
         </select>
+
+        <input type="submit" value="enviar datos">
 
     </form>
 
@@ -45,7 +47,25 @@
 
     <script>
         function habilitaColor(){
-            let 
+            let color = document.getElementById("color-movil").value;
+
+            if (color === '#ff0000' || color === '#ffff00') {
+                alert('Color válido, se enviarán los datos');
+                return true;
+            } 
+            return false;
+        }
+
+        function activarColor(){
+            let producto = document.getElementById("producto");
+            let buttom = document.querySelector('input[type="submit"]');
+
+            if(selected == "movil"){
+                buttom.removeAttribute('disabled');
+
+            } else {
+                buttom.setAttribute('disabled', '');
+            }
         }
     </script>
 </body>
