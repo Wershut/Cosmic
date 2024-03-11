@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #provincia {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+
+<body>
+    <p>9.3.3	Diseñar una página web con  un formulario con un campo  de tipo “color” y 
+        si su color es distinto de rojo ( #ff000 ) o amarillo ( #ffff00 ) no envíe los datos.</p>
+    <p>9.3.4	Hacer los siguientes cambios en la página anterior</p>
+    <ol>
+        <li>El campo anterior está “color” por defecto disabled=”disabled”</li>
+        <li>Añadir un select con tres opciones: “Elija producto”, “Móvil”, “Tablet”</li>
+        <li>En el evento onchange del select, cuando vale “Móvil” se habilita el campo 
+            color quitándole el atributo disabled con el método: .removeAttribute(“disabled”); 
+            Para ponerle otra vez el atributo en caso de que no valga “Móvil” se vuelve 
+            a poner el atributo “disabled” con setAttribute(“disabled”,””) al elemento del color.</li>
+    </ol>
+
+    <h1>Cambio de color</h1>
+
+    <form action="a.php" onsubmit="return validaFormulario()">
+
+        <p>
+            <label for="color">Elija un color: </label>
+            <input type="color" name="color" id="color">
+        </p>
+
+        <select name="dispositivos" id="dispositivos" onchange="ElegirOpcion()">
+            <option value="elija">Elija su producto</option>
+            <option value="Movil">Móvil</option>
+            <option value="Tablet">Tablet</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Enviar color" disabled>
+    
+    </form>
+
+      <script>
+
+        function validaFormulario(){
+            var color = document.getElementById("color").value;
+
+            if (color === '#ff0000' || color === '#ffff00') {
+                alert('Color válido, se enviarán los datos');
+                return true;
+
+            } else {
+                alert('Color diferente a rojo o amarillo');
+                document.getElementById("color").focus();
+                return false;
+            }
+
+        }
+
+        function ElegirOpcion(){
+            var selected = document.getElementById("dispositivos").value;
+            var boton = document.querySelector('input[type="submit"]');
+
+            if(selected == "Movil"){
+                boton.removeAttribute('disabled');
+
+            } else {
+                boton.setAttribute('disabled', '');
+            }
+        }
+    </script>
+    
+    <!--********************************************************-->
+    
+    <p>9.3.5	Hacer un formulario con un select “Pais” con las opciones “Elija destino”, 
+        “España”, “Fuera de España”. Y un select “Provincia” con algunas provincias. 
+        Inicialmente el select provincia tiene la propiedad css visibility:hidden. 
+        Sólo si la opción elegida es “España”, se cambia su propiedad  visibility de hidden a visible.
+    </p>
+    
+    <select name="pais" id="pais" onchange="ElegirOpcion()">
+        <option value="elija">Elija destino</option>
+        <option value="espana">España</option>
+        <option value="fuera">Fuera de España</option>
+
+    </select>
+    <br><br>
+
+
+    <select name="provincia" id="provincia" hidden>
+        <option value="AB">Albacete</option>
+        <option value="T">Toledo</option>
+        <option value="CR">Ciudad Real</option>
+
+    </select>
+    
+    <script>
+        function ElegirOpcion(){
+            var selected = document.getElementById("pais").value; 
+            var select = document.getElementById("provincia");
+
+            if(selected == "espana"){
+                select.removeAttribute('hidden');
+            } else {
+                select.setAttribute('hidden', '');
+            }
+        }
+
+    </script>
+
+</body>
+</html>
