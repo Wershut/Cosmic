@@ -85,7 +85,7 @@
     
     <select name="pais" id="pais" onchange="ElegirOpcion()">
         <option value="elija">Elija destino</option>
-        <option value="espana">España</option>
+        <option value="es">España</option>
         <option value="fuera">Fuera de España</option>
 
     </select>
@@ -93,9 +93,9 @@
 
 
     <select name="provincia" id="provincia" hidden>
-        <option value="AB">Albacete</option>
-        <option value="T">Toledo</option>
-        <option value="CR">Ciudad Real</option>
+        <option value="ab">Albacete</option>
+        <option value="to">Toledo</option>
+        <option value="cr">Ciudad Real</option>
 
     </select>
     
@@ -104,7 +104,7 @@
             var selected = document.getElementById("pais").value; 
             var select = document.getElementById("provincia");
 
-            if(selected == "espana"){
+            if(selected == "es"){
                 select.removeAttribute('hidden');
             } else {
                 select.setAttribute('hidden', '');

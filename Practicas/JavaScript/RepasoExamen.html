@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+    <h1>Venta de moviles</h1>
+    <form action="procesaVenta.php" onsubmit="validaFormulario()">
+        <label for="color-movil">Color del móvil</label>
+        <input type="color" name="color-movil" id="color-movil"> //type="text"
+        <p></p>
+        <input type="submit" value="compra">
+
+
+    </form>
+
+    <script>
+        function validaFormulario(){
+            let colorMovil = document.getElementById("color-movil");
+            if(colorMovil.value != "#ff0000" && colorMovil.value != "#ffff00"){
+                alert ("Solo quedan rojos y amarillos");
+                colorMovil.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
