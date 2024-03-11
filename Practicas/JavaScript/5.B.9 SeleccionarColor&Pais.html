@@ -36,8 +36,8 @@
 
         <select name="dispositivos" id="dispositivos" onchange="ElegirOpcion()">
             <option value="elija">Elija su producto</option>
-            <option value="Movil">Móvil</option>
-            <option value="Tablet">Tablet</option>
+            <option value="movil">movil</option>
+            <option value="tab">tablet</option>
         </select>
         <br><br>
 
@@ -48,7 +48,7 @@
       <script>
 
         function validaFormulario(){
-            var color = document.getElementById("color").value;
+            let color = document.getElementById("color").value;
 
             if (color === '#ff0000' || color === '#ffff00') {
                 alert('Color válido, se enviarán los datos');
@@ -63,14 +63,14 @@
         }
 
         function ElegirOpcion(){
-            var selected = document.getElementById("dispositivos").value;
-            var boton = document.querySelector('input[type="submit"]');
+            let selected = document.getElementById("dispositivos").value;
+            let buttom = document.querySelector('input[type="submit"]');
 
-            if(selected == "Movil"){
-                boton.removeAttribute('disabled');
+            if(selected == "movil"){
+                buttom.removeAttribute('disabled');
 
             } else {
-                boton.setAttribute('disabled', '');
+                buttom.setAttribute('disabled', '');
             }
         }
     </script>
