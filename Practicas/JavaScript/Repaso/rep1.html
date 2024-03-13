@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <form action="a.php" onsubmit="return envio()">
+        <p id="prueba">deshabilitado</p><!--Prueba para insertar elementos-->
+        <input type="color" id="color" value="color" disabled>
+        <p></p>
+        <select id="producto" onchange="productoOn()">
+            <option value="elija" selected>Elija</option>
+            <option value="edom">Electrodomésticos</option>
+            <option value="ropa">Ropa</option>
+        </select>
+        <select id="edomSel" style="visibility: hidden;">
+            <option value="kasi">KASI</option>
+            <option value="sam">SAMSUNG</option>
+            <option value="other">OTHER</option>
+        </select>
+        <select id="ropaSel" style="visibility: hidden;">
+            <option value="strauss">Strauss</option>
+            <option value="nike">NIKE</option>
+            <option value="adidas">ADIDAS</option>
+        </select>
+
+        <input type="submit" value="enviar" id="enviar" disabled>
+    </form>
+    <script>
+        let color = document.getElementById("color");
+        let prueba = document.getElementById("prueba");
+        let producto = document.getElementById("producto");
+        let edomSel = document.getElementById("edomSel");
+        let ropaSel = document.getElementById("ropaSel");
+        let enviar = document.getElementById("enviar");
+        
+        let conta = 0;
+
+        function envio(){
+            if (color.value == "#00ff00" || color.value == "#0000ff"){
+                return true;
+            }
+            return false;
+        }
+
+        function productoOn(){
+            if (producto.value === "edom" || producto.value === "ropa"){
+                if(conta == 0 ){
+                   prueba.innerHTML = 'desabilitado'; 
+                }
+                color.removeAttribute('disabled');
+                conta = conta+1;
+                
+                if(conta == 1 ){
+                   prueba.innerHTML += ' : NO'; 
+                }
+            }
+            if (producto.value === "edom"){
+                edomSel.style.visibility = "visible";
+                ropaSel.style.visibility = "hidden";
+            }
+            if(producto.value === "ropa"){
+                ropaSel.style.visibility = "visible";
+                edomSel.style.visibility = "hidden";
+            }
+            if (producto.value === "elija"){
+                edomSel.style.visibility = "hidden";
+                ropaSel.style.visibility = "hidden";
+                color.setAttribute('disabled', 'disabled');
+                prueba.innerHTML = "desabilitado nuevamente";
+                conta = 0;
+            }
+        }
+
+        function colorComprobar(){
+            if (color.value == "#00ff00" || color.value == "#0000ff"){
+                enviar.removeAttribute('disabled');
+            } else {
+                enviar.setAttribute('disabled', 'disabled');
+            }
+        }
+    </script>
+</body>
+</html>

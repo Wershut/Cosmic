@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <style>
+        #resultado{
+            width: 280px; height: 200px;
+            border: 2px solid blue;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>1-	Calculo de interes simple </h1>
+
+<button onclick="calcularInteres1()">Calcular interes con Prompt</button>
+
+<br><br>
+
+<form action="enviar.php" id="formulario">
+    <label for="capital">Capital: </label>
+    <input type="number" id="capital" name="capital"  required>
+
+    <label for="interes">Interes:</label>
+    <input type="number" id="interes" name="interes" required>
+
+    <label for="tiempo">Tiempo (meses):</label>
+    <input type="number" id="tiempo" name="tiempo" required>
+
+    <button type="button" onclick="calcularInteres2()">Calcular con Formulario</button>
+</form>
+
+<br><br>
+
+<div id="resultado"></div>
+
+<!--***************SCRIPT************************-->
+<script>
+    function calcularInteresSimple(capital, interes, tiempo) {
+        return ((capital * interes * tiempo) / 1200);
+    }
+    function concederPrestamo(cantidad) {
+        if (cantidad < 10000) {
+            return "Prestamo concedido";
+        } else {
+            return "Prestamo NO concedido";
+        }
+    }
+    function calcularInteres1() {
+        let capital = Number(prompt("Dime el capital..."));
+        let interes = Number(prompt("Dime el inters..."));
+        let tiempo = Number(prompt("Dime el tiempo en meses..."));
+
+        let interesSimple = calcularInteresSimple(capital, interes, tiempo);
+        let capitalTotal = capital + interesSimple;
+        let mensajePrestamo = concederPrestamo(capitalTotal);
+
+        alert("Capital total que se tiene que devolver : " + capitalTotal + mensajePrestamo);
+    }
+
+    function calcularInteres2() {
+        let capital = Number(document.getElementById("capital").value);
+        let interes = Number(document.getElementById("interes").value);
+        let tiempo = Number(document.getElementById("tiempo").value);
+
+        let interesSimple = calcularInteresSimple(capital, interes, tiempo);
+        let capitalTotal = capital + interesSimple;
+        let mensajePrestamo = concederPrestamo(capitalTotal);
+
+        document.getElementById("resultado").innerHTML = "Capital total a devolver: " + capitalTotal + " y " + mensajePrestamo;
+    }
+</script>
+
+</body>
+</html>
