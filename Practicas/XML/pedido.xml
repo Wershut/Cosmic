@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Pedidos>
+        <pedido fecha ="AAAA-MM-DD" hora="09:23:23" >
+                <usuario NIF="8490e9un">
+                        <generica>
+                              <nombre>angel</nombre>
+                              <apellidos>lopez</apellidos>
+                              
+                        </generica>
+                        
+                        <dirreccion>
+                              <via>calle</via>
+                              <num>3</num>
+                              <localidad>villarrobledo</localidad>
+                              <CP>095498</CP>
+                        </dirreccion>
+                </usuario>
+                
+                <listaArticulos>
+                        <articulo codArticulo="1">
+                                <descripcion>es un articulo</descripcion>
+                                <precio>6</precio>
+                        </articulo>
+                </listaArticulos>
+        </pedido>
+        
+</Pedidos>
